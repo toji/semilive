@@ -27,17 +27,16 @@ Drop semilive.py and semilive.sublime-settings into your Sublime Text 3
 "Preferences->Browse Packages" menu item). Then you can run the plugin commands
 from the console or (more usefully) bind them to shortcut keys.
 
- `semilive_next`: Play the next step in the script
- `semilive_reset`: Reset the step counter to 0
+ - `semilive_next`: Play the next step in the script
+ - `semilive_reset`: Reset the step counter to 0
 
 The script is defined in the `semilive.sublime-settings` file. A `script` array
 defines a series of JSON objects that use the following keys:
 
- `after`: A string to search for which the `insert` text will be inserted after
- `replace`: A string to search for which will be replaced by the `insert` text
- `insert`: A string or list of strings to be inserted after the `after` string
-           or which will replace the `replace` string
- `instant`: If true will not simulate typing character by character
- `highlight`: If false will not highlight the `insert` strings after insertion
+ - `after`: A string to search for which the `insert` text will be inserted after
+ - `replace`: A string to search for which will be replaced by the `insert` text
+ - `insert`: A string or list of strings to be inserted after the `after` string or which will replace the `replace` string
+ - `instant`: If true will not simulate typing character by character
+ - `highlight`: If false will not highlight the `insert` strings after insertion
 
 For examples see the default `semilive.sublime-settings`
