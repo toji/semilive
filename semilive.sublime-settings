@@ -1,0 +1,63 @@
+{
+    "script": [
+        {
+            "comment": "Commands with no `after` or `replace` will insert at the beginning of the file",
+
+            "insert": "I am the very model of a modern Major-General,"
+        },
+
+        {
+            "comment": "Commands with an `after` will find that string and inject the `insert` string after it",
+
+            "after": "I am the very model of a modern Major-General,",
+            "insert": "I've information vegetable and mineral,"
+        },
+
+        {
+            "comment": "Commands with a `replace` will find that string and replace it with the `insert` string",
+
+            "replace": "I've information vegetable and mineral,",
+            "insert": "I've information vegetable, animal, and mineral,"
+        },
+
+        {
+            "comment": "You can also specify an array of `insert` strings",
+
+            "after": "I've information vegetable, animal, and mineral,",
+            "insert": [
+                "I know the kings of England, and I quote the fights historical,",
+                "From Marathon to Waterloo, in order categorical;"
+            ]
+        },
+
+        [
+            {
+                "comment": "You can string together several steps in an array and they will be performed together.",
+
+                "after": "From Marathon to Waterloo, in order categorical;",
+                "insert": "I'm very well acquainted, too, with matters mathematical,",
+            },
+            {
+                "after": "I'm very well acquainted, too, with matters mathematical,",
+                "insert": "I understand equations, both the simple and quadratical,"
+            }
+        ],
+
+
+        {
+            "comment": "Specifying `instant: true` will skip the typing effect",
+
+            "after": "I understand equations, both the simple and quadratical,",
+            "insert": "About binomial theorem I'm teeming with a lot o' news,",
+            "instant": true
+        },
+
+        {
+            "comment": "Specifying `highlight: false` will skip highlighting the inserted text",
+
+            "after": "About binomial theorem I'm teeming with a lot o' news,",
+            "insert": "With many cheerful facts about the square of the hypotenuse.",
+            "highlight": false
+        }
+    ]
+}
